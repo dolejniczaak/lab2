@@ -1,0 +1,1 @@
+select ProductName, UnitPrice from Products where UnitPrice=(select MIN(UnitPrice) from Products) or UnitPrice=(select Max(UnitPrice) from Products)
